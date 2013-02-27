@@ -3,7 +3,7 @@
 ## Requirements
 * WP E-commerce plugin for Wordpress
 * PHP configuration: 
-	* OpenSSl
+	* OpenSSL
 	* SOAP
 	
 ## Installation
