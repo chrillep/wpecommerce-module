@@ -90,17 +90,22 @@
 
 						}else{
 							jQuery("#persnr_error_tr_fakt").hide();
-							jQuery("#uppd_adress_fakt").removeAttr("disabled");
+							jQuery("#uppd_adress_fakt").trigger('click');
+							if (jQuery('#agree').attr("checked")) {
+						        jQuery(".make_purchase").removeAttr("disabled");
+						    } else {
+						    	jQuery(".make_purchase").attr("disabled", "true");
+							}
 						}
-				}
+					}
 				
 				
 				//Validation
-				jQuery("#svea_fakt_pnr").keyup(function(){
+				jQuery("#svea_fakt_pnr, #agree").keyup(function(){
 					fakt_validation();						
 				}).change(function(){
 					fakt_validation();						
-				});
+				});	
 
 				
 				//Get addresses function
